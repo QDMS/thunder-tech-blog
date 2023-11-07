@@ -1,0 +1,40 @@
+---
+// component imports
+import PostCard from "../components/PostCard.astro";
+import MainLayout from "../layouts/MainLayout.astro";
+
+// utils imports
+import {formatBlogPosts} from "../js/utils";
+
+const allPosts = await Astro.glob("./blog/*.md");
+const formattedPosts = formatBlogPosts(allPosts, {
+    limit: 3,
+});
+---
+
+<MainLayout title="Home" description="Welcome to Thunder Tech Blog">
+    <section class="container" aria-label="New Blog Posts">
+        <h2 class="h1" style={{ 
+            display: "flex",
+            marginLeft: "auto",
+            padding: "10px",
+            marginRight: "auto",
+            textAlign: "center",
+            border: "1px solid red",
+            justifyContent: "center",
+            alignItems: 'center',
+         }}>Welcome To Thunder Tech Blog
+         </h2>
+         <img src="/images/TTBLogo.png" alt="Logo" height="600
+         " style={{ 
+            justifyContent: 'center',
+          }} />
+          <div class="post-container">
+              {
+                formattedPosts.map((post) => (
+                  <PostCard frontmatter={post.frontmatter} url={post.url} tagType="h3" />
+                ))
+              }
+          </div>
+      </section>
+</MainLayout>

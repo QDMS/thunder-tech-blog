@@ -1,0 +1,42 @@
+---
+import "../styles/404.css"
+// component imports
+import Link from "../components/Link.astro";
+import MainLayout from "../layouts/MainLayout.astro";
+---
+<MainLayout title="Page Not Found" description="Wrong Page">
+    <body>
+        <div class="container" style={{ 
+            display: "grid",
+            placeItems: "center",
+            textAlign: "center",
+            gap: "var(--space-sm)"
+         }}>
+            <div class="astronaut">
+                <div class="body">
+                    <div class="helmet">
+                        <div class="visor"></div>
+                    </div>
+                    <div class="backpack"></div>
+                </div>
+                <div class="legs">
+                    <div class="leg"></div>
+                    <div class="leg"></div>
+                </div>
+                <div class="arm"></div>
+            </div>
+            <div class="text">
+                <h1 class="h1">Welp, this is awkward</h1>
+                <p>We seem to have misplaced something</p>
+            </div>
+            <Link href="/"
+            style="secondary"
+            text="Go Home"
+            icon={{ 
+                name: "tabler:home",
+                side: "left"
+             }}
+            />
+        </div>
+    </body>
+</MainLayout>

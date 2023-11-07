@@ -1,0 +1,167 @@
+body {
+    animation: background 20s linear infinite;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.astronaut {
+    position: relative;
+    width: 150px;
+    height: 250px;
+    animation: float 2s ease-in-out infinite;
+}
+
+.body {
+    background-color: #fff;
+    border-radius: 50%;
+    width: 150px;
+    height: 200px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: rotate 4s linear infinite;
+}
+
+.head {
+    background-color: #ffcc29;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.backpack {
+    background-color: #777;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.legs {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.leg {
+    background-color: #fff;
+    width: 15px;
+    height: 90px;
+    margin: 0 10px;
+    border-radius: 5px;
+}
+
+.arm {
+    background-color: #fff;
+    width: 15px;
+    height: 100px;
+    position: absolute;
+    top: 75px;
+    left: 50px;
+    transform: rotate(20deg);
+}
+
+.text {
+    text-align: center;
+}
+
+h1 {
+    font-size: 100px;
+}
+
+p {
+    font-size: 24px;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+@keyframes background {
+    0% {
+        background-color: #000;
+    }
+    50% {
+        background-color: #5E0303;
+    }
+    100% {
+        background-color: #000;
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes rotate {
+    0%, 100% {
+        transform: translateX(-50%) rotate(0deg);
+    }
+    50% {
+        transform: translateX(-50%) rotate(45deg);
+    }
+}
+
+.helmet {
+    background-color: #000;
+    border-radius: 50%;
+    width: 75px;
+    height: 75px;
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.visor {
+    background-color: #2f3640;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 12.5px;
+    left: 12.5px;
+}
+
+@keyframes blink {
+    0%, 100% {
+        height: 50px;
+    }
+    50% {
+        height: 0;
+    }
+}
+
+.visor:before, .visor:after {
+    content: '';
+    background-color: #fff;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    position: absolute;
+    top: 12.5px;
+    transform: translateX(10px);
+}
+
+.visor:after {
+    transform: translateX(-10px);
+}

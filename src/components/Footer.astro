@@ -1,0 +1,35 @@
+---
+import { Icon } from "astro-icon";
+---
+
+<footer>
+  <div>
+    <small>
+      Thunder Tech Blog &copy; <span id="copyright"></span> | All rights
+      reserved
+    </small>
+    <div class="counter">
+      <!-- hitwebcounter Code START -->
+      <a href="https://www.hitwebcounter.com" target="_blank">
+        <img
+          src="https://hitwebcounter.com/counter/counter.php?page=9753238&style=0009&nbdigits=5&type=page&initCount=0"
+          title="Thunder Tech Blog Counter Widget"
+          alt="Visit counter For Websites"
+          style={{ border: "0" }}
+        /></a
+      >
+    </div>
+    <small>
+      <a href="/rss.xml">
+        Subscribe to RSS
+        <Icon name="akar-icons:rss" width="20" height="20" />
+      </a>
+    </small>
+  </div>
+</footer>
+
+<script>
+  document.querySelector("#copyright").textContent = new Date()
+    .getFullYear()
+    .toString();
+</script>

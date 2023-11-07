@@ -1,0 +1,16 @@
+---
+
+// component imports
+import Link from "../components/Link.astro";
+import MainLayout from "../layouts/MainLayout.astro";
+---
+<MainLayout title="About The Blog" description="About Thunder Tech Blog" robots={true}>
+    <section class="container about" aria-label="About Me">
+        <img src="/images/TTBLogo.png" alt="logo" />
+        <div class="content">
+            <h1 class="h1">Thunder Tech Blog</h1>
+            <p>Thunder Tech Blog is your go-to source for all things tech and innovation. Our mission is to keep you in the loop with the latest developments in the world of technology, from groundbreaking gadgets to cutting-edge software and everything in between. Whether you're a tech enthusiast, a professional in the field, or just curious about the ever-evolving tech landscape, Thunder Tech Blog offers insightful articles, reviews, and how-to guides that cater to a wide range of interests and expertise levels. We are dedicated to demystifying complex concepts, exploring emerging trends, and providing practical advice to help you make informed decisions in the digital age. Join us on this electrifying journey through the world of tech, and let Thunder Tech Blog be your trusted companion in the fast-paced world of innovation.</p>
+            <Link href="mailto:tismstudios@gmail.com" style="primary" text="Contact TTB"/>
+        </div>
+    </section>
+</MainLayout>

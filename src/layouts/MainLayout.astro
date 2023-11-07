@@ -1,0 +1,18 @@
+---
+import "../styles/global.css"
+import MainHead from "./MainHead.astro";
+import Nav from "../components/Nav.astro"
+import Footer from "../components/Footer.astro";
+const {title = "Thunder Tech Blog", description = "All about tech talk.", image, frontmatter, robots} = Astro.props;
+---
+
+<html lang="en">
+	<MainHead {title} {description} {image} {frontmatter} {robots} />
+	<Nav />
+	<body>
+		<main>
+			<slot>Default Text</slot>
+		</main>
+		<Footer/>
+	</body>
+</html>

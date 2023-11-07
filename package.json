@@ -1,0 +1,34 @@
+{
+  "name": "thunder-tech-blog",
+  "type": "module",
+  "version": "0.0.1",
+  "private": true,
+  "browsersList": [
+    "defaults"
+  ],
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.3.1",
+    "@astrojs/image": "^0.18.0",
+    "@astrojs/react":  "^2.1.1",
+    "@astrojs/rss": "^1.0.3",
+    "@astrojs/sitemap": "^3.0.3",
+    "@types/react": "^18.2.37",
+    "@types/react-dom": "^18.2.15",
+    "astro": "^2.10.15",
+    "astro-icon": "^0.8.1",
+    "express": "^4.18.2",
+    "glob": "^10.3.10",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sanitize-html": "^2.11.0",
+    "sharp": "^0.32.6",
+    "typescript": "^5.2.2"
+  }
+}
