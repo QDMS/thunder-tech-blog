@@ -1,7 +1,7 @@
 ---
 layout: "../../layouts/BlogPostLayout.astro"
 title: "Unveiling the Wonders of MRI: A Technological Marvel in Healthcare"
-date: 11/7/2023
+date: 11/8/2023
 author: Thunder Tech
 image: {
     src: "/images/post-8.png",
